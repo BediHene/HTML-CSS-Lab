@@ -136,6 +136,29 @@ article {
     font-style: italic;
 }
 
+/* form styles */ 
+.form-input {
+    padding : 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: thin solid #dfd3c3;
+}
+
+.form-button {
+    width: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: rgba(59, 105, 120, 35%);
+    color: #444444;
+    font-weight: bold;
+}
+
+.form-button:hover {
+    background: #3b6978;
+    color: white;
+}
+
 
 /* breakponts applied using flex 
 ------------------------------------------ */
