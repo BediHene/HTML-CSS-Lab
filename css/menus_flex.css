@@ -1,0 +1,161 @@
+/* general page styles 
+----------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+h1, h2, h4, h4, h5 {
+    font-family: Garamond, Baskerville, serif;
+}
+
+.site-title {
+    background: lightgrey;
+    text-align: center;
+    padding: 50px 0;
+    color: #204051;
+}
+
+.header-navigation {
+    background: burlywood;
+}
+
+.header-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #204051;
+    
+  }
+
+.header-navigation ul a {
+    text-decoration: none;
+    display: block;
+    padding: 1em 2em;
+    color: white;
+}
+
+.header-navigation ul a:hover{
+    background:lightgrey;
+    color: #204051;
+}
+
+.header-navigation :active {
+    background: lightgrey;
+    color: #204051;
+}
+
+
+
+/* footer styles 
+----------------------------- */
+.footer-main {
+    padding: 1.2em;
+    background: #204051;
+    color: whitesmoke;
+}
+
+.footer-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: #84a9ac;
+}
+
+.footer-list ul li a:hover {
+    color: white;
+}
+
+.footer-list ul li {
+    padding: .5em 0;
+    font-weight: lighter;
+}
+
+
+.footer-wrapper3 {
+    color: #84a9ac;
+}
+
+.footer-wrapper4 {
+    color: #3b6978;
+    text-transform: uppercase;
+}
+
+.footer-wrapper4 span {
+    font-family: Brush Script Mt;
+    font-size: 1.8em;
+    text-transform: none;
+}
+
+.footer-wrapper4 span:hover {
+    color: whitesmoke;
+}
+
+
+/* header and footer styles for larger pages
+usinf flex 
+----------------------------- */
+@media screen and (min-width: 600px) {
+    .header-navigation ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-wrapper-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer-wrapper3 {
+        flex: 0 1 25%;
+    }
+
+    .footer-wrapper4 {
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/* menu styles
+----------------------------- */
+section h3 {
+    margin-top: 100px;
+    padding-left: 20px;
+    color: #3c096c;
+}
+
+
+.menu ul {
+    background: #3c096c;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.menu ul a {
+    text-decoration: none;
+    display: block;
+    padding: 1em 2em;
+    color: white;
+}
+
+.menu ul a:hover {
+    background: #c77dff;
+    color: #000;
+}
+
+
+.simple-menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
