@@ -1,30 +1,3 @@
-/* Base styles that apply to all menus */
-.menu-section {
-	padding-bottom: 2em;
-	margin-bottom: 2em;
-	border-bottom: 1px solid hsl(0, 0%, );
-}
-
-.menu ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	background: hsl(0, 0%, 15%);
-}
-
-.menu li a {
-	display: block;
-	text-decoration: none;
-	color: white;
-	padding: .6em 1em;
-}
-
-.menu li a:hover {
-	background: hsl(0, 0%, 25%);
-}
-
-
-
 /* Styles for Single Level Menu */
 @media screen and (max-width: 30em){
 	.multi-level-nav ul ul li a {
@@ -38,10 +11,13 @@
 
 @media screen and (min-width: 30em){
 	.multi-level-nav ul {
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 	}	
 
 	.multi-level-nav li {
+        flex: 1 0 auto;
 		position: relative;
 	}
 
@@ -56,11 +32,11 @@
 	}
 
 	.multi-level-nav ul ul li {
-        
+        flex: 1 1 auto;
 	}
 
 	.multi-level-nav ul .toggled-on {
-		display: block;
+		display: flex;
 	}
 
 	.dropdown-toggle {

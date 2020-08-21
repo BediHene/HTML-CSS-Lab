@@ -4,7 +4,11 @@
         <title>Styling Menu's using Flexbox</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-        <link href="css\menus_flex.css"  type="text/css" rel="stylesheet">
+        <link href="css\menus_flex.css"  type="text/css" rel="stylesheet" media="all">
+        <link href="css\accessibility.css"  type="text/css" rel="stylesheet" media="all" >
+        <link href="css\nav-social.css"  type="text/css" rel="stylesheet" media="all" >
+        <link href="css\nav-multi-level.css"  type="text/css" rel="stylesheet" media="all" >
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      
     </head>
@@ -27,157 +31,116 @@
            </div>
         </header>
 
-        <section class="menu-section">
-            <h3> Single level Menu</h3>
-            <nav class="simple-menu menu">
-              <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </nav>
-        </section>
-
-        <section class="menu-section">
-            <h3>Multi level Menu</h3>
-            <nav class="multi-level menu">
+        <div class="menu-container"> 
+            <section class="menu-section">
+                <h3> Single level Menu</h3>
+                <nav class="simple-menu menu">
                 <ul>
                     <li><a href="#">home</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services </a></li>
-                        <ul class="sub-menu">
-                            <li><a href="#">Event Organization</a></li>
-                            <li><a href="#">Tour Guide</a></li>
-                            <li><a href="#">Car rental</a></li>
-                            <li><a href="#">Ship rental</a></li>
-                        </ul>
+                    <li><a href="#">Services</a></li>
                     <li><a href="#">Locations</a></li>
-                        <ul class="sub-menu">
-                            <li><a href="#">Accra</a></li>
-                            <li><a href="#">Takoradi</a></li>
-                            <li><a href="#">Cape Coast</a></li>
-                        </ul>
                     <li><a href="#">Programs</a></li>
-                        <ul class="sub-menu">
-                            <li><a href="#">Weddings</a></li>
-                            <li><a href="#">Conferences</a></li>
-                            <li><a href="#">Seminars</a></li>
-                            <li><a href="#">Workshops</a></li>
-                        </ul>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
-            </nav>
-        </section>
+                </nav>
+            </section>
 
-        <section class="menu-section">
-            <h3>Advanced Menu</h3>
-            <nav class="advance-menu menu">
-                <ul>
-                    <li> 
-                    <a href="#"> 
-                        <div class="menu-icon"> 
-                          <i class="fa fa-home"></i>
-                             </div>  <div class="button-text">
-                        LinkedIn <span>follow my professional page here</span>
-                        </div>  
-                      </a>
-                    </li>
-
-                    <li> 
-                        <a href="#"> 
-                            <div class="menu-icon"> 
-                              <i class="fa fa-github"></i>
-                                 </div>  <div class="button-text">
-                            GitHub <span> This is where it all begins </span>
-                            </div>  
-                          </a>
-                    </li>
-
-                    <li> 
-                        <a href="#"> 
-                            <div class="menu-icon"> 
-                              <i class="fa fa-stack-overflow"></i>
-                                 </div>  <div class="button-text">
-                            StackOverflow <span>Providing answers to everyday coding problems</span>
-                            </div>  
-                          </a>
-                    </li>
-
-                    <li> 
-                        <a href="#"> 
-                            <div class="menu-icon"> 
-                                <i class="fa fab-kaggle"></i>
-                                 </div>  <div class="button-text">
-                            Kaggle <span> Follow my Data Science works here </span>
-                            </div>  
-                          </a>
-                    </li>
-
-                    <li> 
-                        <a href="#"> 
-                            <div class="menu-icon"> 
-                              <i class="fa fa-codepen"></i>
-                                 </div>  <div class="button-text">
-                            CodePen <span>My personal laboratory for testing code</span>
-                            </div>  
-                          </a>
-                        </li>
-                </ul>
-            </nav>
-        </section>
-
-        <section class="menu-section">
-            <h3>Social Menu's</h3>
-            <nav class="social-menu menu">
-                <ul>
-                    <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
-                    <li><a href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
-                    <li><a href="http://whatsapp.com"><span class="screen-reader-text">WhatsApp</span></a></li>
-                    <li><a href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
-                    <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section class="menu-section">
-            <h3>Mixed multi-level and Social Menu's</h3>
-            <div class="mixed-menu wrapper menu">
-                <nav class="multi-level">
+            <section class="menu-section">
+                <h3>Multi level Menu</h3>
+                <nav id="multi-level-nav"  class="multi-level-nav menu" role="navigation">
                     <ul>
                         <li><a href="#">home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li class="has-children"><a href="#">Services<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
                             <ul class="sub-menu">
                                 <li><a href="#">Event Organization</a></li>
                                 <li><a href="#">Tour Guide</a></li>
                                 <li><a href="#">Car rental</a></li>
                                 <li><a href="#">Ship rental</a></li>
-                            </ul>
-                        <li><a href="#">Locations</a></li>
+                            </ul> </li>
+                        <li class="has-children"><a href="#">Locations <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button> </a>
                             <ul class="sub-menu">
                                 <li><a href="#">Accra</a></li>
                                 <li><a href="#">Takoradi</a></li>
                                 <li><a href="#">Cape Coast</a></li>
-                            </ul>
-                        <li><a href="#">Programs</a></li>
+                            </ul> </li>
+                        <li class="has-chikdren"><a href="#">Programs <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button> </a>
                             <ul class="sub-menu">
                                 <li><a href="#">Weddings</a></li>
                                 <li><a href="#">Conferences</a></li>
                                 <li><a href="#">Seminars</a></li>
                                 <li><a href="#">Workshops</a></li>
-                            </ul>
+                            </ul> </li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
+            </section>
 
-                <nav class="social-menu">
+            <section class="menu-section">
+                <h3>Advanced Menu</h3>
+                <nav class="advance-menu menu">
+                    <ul>
+                        <li> 
+                        <a href="https://gh.linkedin.com/in/princebediako"> 
+                            <div class="menu-icon"> 
+                            <i class="fa fa-linkedin"></i>
+                                </div>  <div class="button-text">
+                            LinkedIn <span>Follow my professional page here</span>
+                            </div>  
+                        </a>
+                        </li>
+
+                        <li> 
+                            <a href="https://github.com/BediHene"> 
+                                <div class="menu-icon"> 
+                                <i class="fa fa-github"></i>
+                                    </div>  <div class="button-text">
+                                GitHub <span> This is where it all begins </span>
+                                </div>  
+                            </a>
+                        </li>
+
+                        <li> 
+                            <a href="https://stackoverflow.com/users/14081262/bedihene"> 
+                                <div class="menu-icon"> 
+                                <i class="fa fa-stack-overflow"></i>
+                                    </div>  <div class="button-text">
+                                StackOverflow <span>Providing answers to everyday coding problems</span>
+                                </div>  
+                            </a>
+                        </li>
+
+                        <li> 
+                            <a href="https://www.kaggle.com/princebediako"> 
+                                <div class="menu-icon"> 
+                                    <i class="fab fa-kaggle"></i>
+                                    </div>  <div class="button-text">
+                                Kaggle <span> Follow my Data Science works here </span>
+                                </div>  
+                            </a>
+                        </li>
+
+                        <li> 
+                            <a href="https://codepen.io/bedihene"> 
+                                <div class="menu-icon"> 
+                                <i class="fa fa-codepen"></i>
+                                    </div>  <div class="button-text">
+                                CodePen <span>My personal laboratory for testing code</span>
+                                </div>  
+                            </a>
+                            </li>
+                    </ul>
+                </nav>
+            </section>
+
+            
+            <section class="menu-section">
+                <h3>Social Menu 1</h3>
+                <nav class="social-menu menu social1">
                     <ul>
                         <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
                         <li><a href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
@@ -186,29 +149,88 @@
                         <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
                     </ul>
                 </nav>
-            </div>
-        </section>
-        
+            </section>
+
+
+            <section class="menu-section">
+                <h3>Social Menu 2</h3>
+                <nav class="social-menu menu social2">
+                    <ul>
+                        <li><a href="http://github.com"><span class="screen-reader-text">GitHub</span></a></li>
+                        <li><a href="http://stackoverflow.com"><span class="screen-reader-text">StackOverflow</span></a></li>
+                        <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+                        <li><a href="http://kaggle.com"><span class="screen-reader-text">Kaggle</span></a></li>
+                        <li><a href="http://codepen.com"><span class="screen-reader-text">CodePen</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+
+            <section class="menu-section">
+                <h3>Mixed multi-level and Social Menu's</h3>
+                <div class="mixed-menu-wrapper menu">
+                    
+                    <nav id="multi-level-nav"  class="multi-level-nav menu" role="navigation">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li class="has-children"><a href="#">Services<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Event Organization</a></li>
+                                    <li><a href="#">Tour Guide</a></li>
+                                    <li><a href="#">Car rental</a></li>
+                                    <li><a href="#">Ship rental</a></li>
+                                </ul> </li>
+                            <li class="has-children"><a href="#">Locations <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button> </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Accra</a></li>
+                                    <li><a href="#">Takoradi</a></li>
+                                    <li><a href="#">Cape Coast</a></li>
+                                </ul> </li>
+                            <li class="has-chikdren"><a href="#">Programs <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button> </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Weddings</a></li>
+                                    <li><a href="#">Conferences</a></li>
+                                    <li><a href="#">Seminars</a></li>
+                                    <li><a href="#">Workshops</a></li>
+                                </ul> </li>
+                        </ul>
+                    </nav>
+
+
+                    <nav class="social-menu menu social2">
+                        <ul>
+                            <li><a href="http://github.com"><span class="screen-reader-text">GitHub</span></a></li>
+                            <li><a href="http://stackoverflow.com"><span class="screen-reader-text">StackOverflow</span></a></li>
+                            <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+                            <li><a href="http://kaggle.com"><span class="screen-reader-text">Kaggle</span></a></li>
+                            <li><a href="http://codepen.com"><span class="screen-reader-text">CodePen</span></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </section>
+        </div>
 
         <footer class="footer-main">
             <div class="footer-wrapper-main"> 
                 <div class="fotter-wrapper1 footer-list">
                     <h3>Follow me</h3>
                     <ul>
-                        <li><a href="">github</a></li>
-                        <li><a href="">stackoverflow</a></li>
-                        <li><a href="">linkedIn</a></li>
-                        <li><a href="">Codepen</a></li>
+                        <li><a href="https://github.com/BediHene">GitHub</a></li>
+                        <li><a href="https://stackoverflow.com/users/14081262/bedihene">StackOverflow</a></li>
+                        <li><a href="https://gh.linkedin.com/in/princebediako">linkedIn</a></li>
+                        <li><a href="https://codepen.io/bedihene">CodePen</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-wrapper2 footer-list">
                     <h3>Experiments</h3>
                     <ul>
-                        <li><a href="">github</a></li>
-                        <li><a href="">stackoverflow</a></li>
-                        <li><a href="">linkedIn</a></li>
-                        <li><a href="">Codepen</a></li>
+                        <li><a href="layout_flex.html">Flex Layout</a></li>
+                        <li><a href="menus_flex.html">Flex Menu</a></li>
+                        <li><a href="cards_flexbox.html">Flex Cards</a></li>
+                        <li><a href="">Float Layout</a></li>
                     </ul>
                 </div>
 
@@ -216,10 +238,10 @@
                 <div class="footer-wrapper5 footer-list">
                     <h3>Experiments</h3>
                     <ul>
-                        <li><a href="">github</a></li>
-                        <li><a href="">stackoverflow</a></li>
-                        <li><a href="">linkedIn</a></li>
-                        <li><a href="">Codepen</a></li>
+                        <li><a href="">Grid Layout</a></li>
+                        <li><a href="">Grid Menu</a></li>
+                        <li><a href="">Grid Cards</a></li>
+                        <li><a href="">Float Menu</a></li>
                     </ul>
                 </div>
 
@@ -238,6 +260,7 @@
                 <p>This Site is Powered by <span> &COPY; I am BediHene </span> </p>
             </div>
         </footer>
-
+        <script type="text/javascript" src="js\libs\jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js\menu-toggle.js"></script>
     </body>
 </html>

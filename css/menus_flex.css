@@ -37,7 +37,7 @@ h1, h2, h4, h4, h5 {
 }
 
 .header-navigation ul a:hover{
-    background:lightgrey;
+    background: rgba(196, 196, 196, 70%);
     color: #204051;
 }
 
@@ -97,8 +97,14 @@ h1, h2, h4, h4, h5 {
 }
 
 
+.menu-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+
 /* header and footer styles for larger pages
-usinf flex 
+using flex 
 ----------------------------- */
 @media screen and (min-width: 600px) {
     .header-navigation ul {
@@ -124,7 +130,7 @@ usinf flex
 }
 
 
-/* menu styles
+/* general menu styles for all menu's
 ----------------------------- */
 section h3 {
     margin-top: 100px;
@@ -154,8 +160,87 @@ section h3 {
 }
 
 
+/* Simple menu style using flex
+----------------------------- */
 .simple-menu ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
+
+/* Advance menu style using flex
+------------------------------------ */
+
+.advance-menu ul li a {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-icon {
+    flex: 0 0 1.5em;
+    font-size: 1.8em;
+}
+
+.button-text {
+    font-size: 1.8em;
+}
+
+.button-text span {
+    display: block;
+    font-size: 40%;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+    .advance-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .advance-menu ul li {
+        display: flex;
+        flex: 1 0 12em;
+    }
+}
+
+
+/* social menu styles
+The accesiblity link in the head hides the text
+The nav-social link in the head displays the fontawesome icons 
+------------------------------------ */
+@media screen and (min-width: 600px) {
+    .social1 ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .social2 ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+/* multi level menu styles
+The accesiblity link in the head hides the toggle text
+The nav-multi-level link in the head contains the base styling for the menus
+The two scripts below the body contains javascipts code that toggles the menu
+--------------------------------------------------- */
+
+
+
+
+/* mixed menu styles
+combination of two different menu's
+---------------------------------------*/
+@media screen and (min-width: 600px) {
+    .mixed-menu-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: #3c096c;
+    }
+}

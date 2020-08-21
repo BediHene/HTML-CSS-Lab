@@ -33,12 +33,12 @@ h1, h2, h4, h4, h5 {
 
 
 .header-navigation a:hover {
-    background: lightgrey;
+    background: rgba(196, 196, 196, 70%);
     color: #204051;
 }
 
 .header-navigation :active {
-    background: lightgrey;
+    background: rgba(196, 196, 196, 70%);
     color: #204051;
 }
 
@@ -67,7 +67,7 @@ h1, h2, h4, h4, h5 {
     color: #204051;
 }
 
-.main-navigation h2 {
+.main-navigation h3 {
     padding-left: 1em;
     color: #204051;
 }
@@ -86,7 +86,7 @@ h1, h2, h4, h4, h5 {
 
 /* MAIN CONTENT STYLES */
 article {
-    background: ;
+    background: #fff;
     margin: 0;
     padding: 3em 40px;
 }
@@ -172,18 +172,19 @@ article {
         flex-direction: column;
     }
 
-     /* the main tag wraps navigation, main content and side bar
+ /* the main tag wraps navigation, main content and side bar
 this this splits them into two */
     main {
         display: flex;
+        
     }
 
     nav {
-        flex: 0 0 15%;
+        flex: 0 0 10%;
     }
 
     aside {
-        flex: 0 0 20%;
+        flex: 0 0 15%;
     }
 
 
@@ -201,15 +202,9 @@ footer wrapper main holds the 3 contents */
         justify-content: space-around;
     }
 
-    .footer-wrapper1 {
-        flex:;
-        
-    }
 
-    .footer-wrapper2 {
-        flex:;
-       
-    }
+
+
     .footer-wrapper3 {
         flex: 0 1 25%;
     }
@@ -224,7 +219,21 @@ footer wrapper main holds the 3 contents */
 }
    
 
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        
+    }
 
+    nav {
+        flex: 0 0 15%;
+    }
+
+    aside {
+        flex: 0 0 20%;
+    }
+
+}
 
 
 
