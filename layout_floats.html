@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Experimental Layout design with CSS Float</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+        <link href="css\layout_floats.css"  type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container"> 
+        <header class="header-wrapper">
+            <div class="site-title"> 
+                <h1>Page Layout Demo: CSS Float</h1>
+                <p>This page layout is designed with the CSS Float and Display properties</p>
+           </div>
+
+           <div class="header-navigation">
+               <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Floats</a></li>
+                   <li><a href="#">Flexbox</a></li>
+                   <li><a href="#">Grid</a></li>
+                   <li><a href="#">Contact Me</a></li>
+               </ul>
+           </div>
+        </header>
+
+        <main>
+            <nav class="main-navigation">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Menu's</a></li>
+                    <li><a href="#">Layouts</a></li>
+                    <li><a href="#">Cards</a></li>
+                    <li><a href="#">Grid</a></li>
+                    <li class="has-children"><a href="#">Contact Me</a></li>
+                        <ul class="sub-menu">
+                            <li><a href="#">Contact Me</a></li>
+                            <li><a href="#">Contact Me</a></li>
+                            <li><a href="#">Contact Me</a></li>
+                        </ul>
+                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h2>Main Content</h2>
+                <p>Mollit labore dolore ex minim consectetur in eu exercitation. Nostrud in quis cillum esse ea. Quis anim sit excepteur proident exercitation pariatur velit.</p>
+
+                <p>Culpa incididunt pariatur non ullamco sunt occaecat exercitation adipisicing sunt eu. Nostrud adipisicing aute tempor est ullamco esse quis pariatur. Occaecat adipisicing irure ipsum quis sunt est ea voluptate. Amet ad duis incididunt sit proident occaecat non cillum. Ipsum nostrud aliquip sunt excepteur.</p>
+
+                <p>Eiusmod consectetur non nisi sunt cupidatat est est officia aliqua dolore eiusmod. Consectetur excepteur esse anim do incididunt excepteur Lorem eu ea. Reprehenderit deserunt eiusmod mollit do proident eiusmod ex. Non velit enim sunt nulla pariatur aliquip. Nostrud amet dolor elit voluptate pariatur consectetur aliqua aliqua enim do sint.</p>
+
+                <p> Nisi sunt mollit do cupidatat pariatur adipisicing quis ut minim adipisicing ullamco do labore cillum. Laborum laboris eu id ad est proident consectetur. Qui Lorem enim eiusmod commodo deserunt eu veniam ullamco excepteur nulla labore do sit exercitation.</p>
+
+                <p>Consectetur esse duis sunt qui ea velit duis ut deserunt. Ipsum commodo ut quis anim ut eiusmod Lorem sit enim ad laborum dolore irure. Proident pariatur labore qui magna dolore irure. Labore ut laboris est aliquip et laborum incididunt velit voluptate ea ea ut.</p>
+
+                <br>
+                <h2>Main Content Section Two</h2>
+                <p>Mollit labore dolore ex minim consectetur in eu exercitation. Nostrud in quis cillum esse ea. Quis anim sit excepteur proident exercitation pariatur velit.</p>
+
+                <p>Culpa incididunt pariatur non ullamco sunt occaecat exercitation adipisicing sunt eu. Nostrud adipisicing aute tempor est ullamco esse quis pariatur. Occaecat adipisicing irure ipsum quis sunt est ea voluptate. Amet ad duis incididunt sit proident occaecat non cillum. Ipsum nostrud aliquip sunt excepteur.</p>
+
+                <p>Eiusmod consectetur non nisi sunt cupidatat est est officia aliqua dolore eiusmod. Consectetur excepteur esse anim do incididunt excepteur Lorem eu ea. Reprehenderit deserunt eiusmod mollit do proident eiusmod ex. Non velit enim sunt nulla pariatur aliquip. Nostrud amet dolor elit voluptate pariatur consectetur aliqua aliqua enim do sint.</p>
+
+                <p> Nisi sunt mollit do cupidatat pariatur adipisicing quis ut minim adipisicing ullamco do labore cillum. Laborum laboris eu id ad est proident consectetur. Qui Lorem enim eiusmod commodo deserunt eu veniam ullamco excepteur nulla labore do sit exercitation.</p>
+
+                <p>Consectetur esse duis sunt qui ea velit duis ut deserunt. Ipsum commodo ut quis anim ut eiusmod Lorem sit enim ad laborum dolore irure. Proident pariatur labore qui magna dolore irure. Labore ut laboris est aliquip et laborum incididunt velit voluptate ea ea ut.</p>
+            </article>
+
+            <aside class="sidebar">
+                <h3>Related Content</h3>
+                <p>Lorem consectetur cupidatat deserunt consectetur nostrud qui in id aliqua occaecat ipsum.</p>
+                <br>
+
+                <div class="sidebar-forms">
+                    <h3>Subscribe to content</h3>
+                    <form method="POST">
+                       <p>Name <br> <input type="text" name="urname" placeholder="Name" class="form-input"></p>
+                       <p>Telephone <br> <input type="tel" name="urphonenumber" placeholder="+233-242-XXX-XXX" class="form-input"></p>
+                        <p>Email <br> <input type="email" name="email" placeholder="something@bedihene.com" class="form-input"></p>
+                        <input type="submit" value="SUBSCRIBE" class="form-button">
+                        <input type="reset" value="CLEAR" class="form-button">
+                    </form>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer-main">
+            <div class="footer-wrapper-main"> 
+                <div class="fotter-wrapper1 footer-list">
+                    <h3>Follow me</h3>
+                    <ul>
+                        <li><a href="https://github.com/BediHene">GitHub</a></li>
+                        <li><a href="https://stackoverflow.com/users/14081262/bedihene">StackOverflow</a></li>
+                        <li><a href="https://gh.linkedin.com/in/princebediako">linkedIn</a></li>
+                        <li><a href="https://codepen.io/bedihene">CodePen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-wrapper2 footer-list">
+                    <h3>Experiments</h3>
+                    <ul>
+                        <li><a href="layout_flex.html">Flex Layout</a></li>
+                        <li><a href="menus_flex.html">Flex Menu</a></li>
+                        <li><a href="cards_flexbox.html">Flex Cards</a></li>
+                        <li><a href="layout_floats.html">Float Layout</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-wrapper5 footer-list">
+                    <h3>Experiments</h3>
+                    <ul>
+                        <li><a href="layout_grid.html">Grid Layout</a></li>
+                        <li><a href="menus_grids.html">Grid Menu</a></li>
+                        <li><a href="cards_grids.html">Grid Cards</a></li>
+                        <li><a href="menus_floats.html">Float Menu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-wrapper3">
+                    <p>This page is entirely designed using the CSS
+                        Float and Display properties. to demonstrate how easy 
+                        and convenient it is compared to the good old Floats
+                        and Position property. It is responsive and mobile friendly.
+                        We would need to use a lot of CSS 'alchemy' to achieve this.
+                        Feel free to copy the source code and style to use.
+                    </p>
+                </div>
+            </div>  
+
+            <div class="footer-wrapper4">
+                <p>This Site is Powered by  <span>&COPY; I am BediHene </span> </p>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

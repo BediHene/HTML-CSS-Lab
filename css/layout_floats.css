@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+h1, h2, h4, h4, h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.site-title {
+    text-align: center;
+    background:lightgrey;
+    padding: 20px 0;
+    margin: 0;
+    color: #204051;
+}
+
+
+.header-navigation li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1em 1.6em;
+}
+
+.header-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #204051;
+}
+
+
+.header-navigation a:hover {
+    background: rgba(196, 196, 196, 70%);
+    color: #204051;
+}
+
+.header-navigation :active {
+    background: rgba(196, 196, 196, 70%);
+    color: #204051;
+}
+
+
+/* NAVIGATION STYLES */
+.main-navigation {
+    background: #e4e3e3;
+    padding: 20px 0;
+}
+
+.main-navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.main-navigation a {
+    text-decoration: none;
+    padding: 1em 1.6em;
+    display: block;
+}
+
+.main-navigation a:hover {
+    background: #dfd3c3;
+    color: #204051;
+}
+
+.main-navigation h3 {
+    padding-left: 1em;
+    color: #204051;
+}
+
+.main-navigation .sub-menu {
+    padding-left: 2em;
+}
+
+
+/* SIDEBAR STYLES */
+.sidebar {
+    padding: 2em;
+    background: #e4e3e3;
+}
+
+
+/* MAIN CONTENT STYLES */
+article {
+    background: #fff;
+    margin: 0;
+    padding: 3em 40px;
+}
+
+
+/* FOOTER STYLES */
+
+.footer-main {
+    padding: 1.2em;
+    background: #204051;
+    color: whitesmoke;
+}
+
+.footer-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: #84a9ac;
+}
+
+.footer-list ul li a:hover {
+    color: white;
+}
+
+.footer-list ul li {
+    padding: .5em 0;
+    font-weight: lighter;
+}
+
+
+.footer-wrapper3 {
+    color: #84a9ac;
+}
+
+.footer-wrapper4 {
+    color: #3b6978;
+    text-transform: uppercase;
+}
+
+.footer-wrapper4 span {
+    font-family: Brush Script Mt;
+    font-size: 2em;
+    text-transform: none;
+}
+
+.footer-wrapper4 span:hover {
+    color: whitesmoke;
+}
+
+/* form styles */ 
+.form-input {
+    padding : 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: thin solid #dfd3c3;
+}
+
+.form-button {
+    width: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: rgba(59, 105, 120, 35%);
+    color: #444444;
+    font-weight: bold;
+}
+
+.form-button:hover {
+    background: #3b6978;
+    color: white;
+}
+
+
+/* breakponts applied using flex 
+------------------------------------------ 
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+ /* the main tag wraps navigation, main content and side bar
+this this splits them into two 
+    main {
+        display: flex;
+        
+    }
+
+    nav {
+        flex: 0 0 10%;
+    }
+
+    aside {
+        flex: 0 0 15%;
+    }
+
+
+         /* using flex to make navigation horizontal 
+    .header-navigation ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+             /* footer flex styles
+footer wrapper main holds the 3 contents 
+    .footer-wrapper-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+
+
+    .footer-wrapper3 {
+        flex: 0 1 25%;
+    }
+
+ 
+    .footer-wrapper4 {
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+}
+   
+
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        
+    }
+
+    nav {
+        flex: 0 0 15%;
+    }
+
+    aside {
+        flex: 0 0 20%;
+    }
+
+}
+
+
+
+
+
+
