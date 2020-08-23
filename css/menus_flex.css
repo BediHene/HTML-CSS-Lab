@@ -140,7 +140,7 @@ section h3 {
 
 
 .menu ul {
-    background: #3c096c;
+    background: #295d79;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -155,8 +155,8 @@ section h3 {
 }
 
 .menu ul a:hover {
-    background: #c77dff;
-    color: #000;
+    background: #4183a7;
+    color: #fff;
 }
 
 
@@ -229,7 +229,31 @@ The accesiblity link in the head hides the toggle text
 The nav-multi-level link in the head contains the base styling for the menus
 The two scripts below the body contains javascipts code that toggles the menu
 --------------------------------------------------- */
+@media screen and (min-width: 600px) {
+    
+	.multi-level-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+	}
 
+	.multi-level-nav li {
+        flex: 1 0 auto;
+		position: relative;
+	}
+
+	.multi-level-nav ul ul li {
+        flex: 1 1 auto;
+	}
+
+	.multi-level-nav ul .toggled-on {
+		display: flex;
+    }
+    
+    .multi-level-nav ul ul {
+        background: #163342;
+    }
+}
 
 
 
@@ -241,6 +265,6 @@ combination of two different menu's
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background: #3c096c;
+        background: #295d79;
     }
 }

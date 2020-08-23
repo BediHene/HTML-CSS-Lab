@@ -11,10 +11,10 @@ h1, h2, h4, h4, h5 {
 }
 
 .site-title {
-    background: lightgrey;
+    background: #e0dede;
     text-align: center;
     padding: 50px 0;
-    color: #204051;
+    color: #3c096c;
 }
 
 .header-navigation {
@@ -25,7 +25,7 @@ h1, h2, h4, h4, h5 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background: #204051;
+    background: #6a197d;
     
   }
 
@@ -37,7 +37,7 @@ h1, h2, h4, h4, h5 {
 }
 
 .header-navigation ul a:hover{
-    background: rgba(196, 196, 196, 70%);
+    background: #ffa5b0;
     color: #204051;
 }
 
@@ -52,7 +52,7 @@ h1, h2, h4, h4, h5 {
 ----------------------------- */
 .footer-main {
     padding: 1.2em;
-    background: #204051;
+    background: #3c096c;
     color: whitesmoke;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h4, h4, h5 {
 
 .footer-list ul li a {
     text-decoration: none;
-    color: #84a9ac;
+    color: lightgrey;
 }
 
 .footer-list ul li a:hover {
@@ -78,11 +78,11 @@ h1, h2, h4, h4, h5 {
 
 
 .footer-wrapper3 {
-    color: #84a9ac;
+    color: lightgrey;
 }
 
 .footer-wrapper4 {
-    color: #3b6978;
+    color: grey;
     text-transform: uppercase;
 }
 
@@ -103,29 +103,33 @@ h1, h2, h4, h4, h5 {
     padding-bottom: 200px;
 }
 
+
+
+
 /* header and footer styles for larger pages
 using flex 
------------------------------ 
+----------------------------- */
 @media screen and (min-width: 600px) {
     .header-navigation ul {
-        display: flex;
-        justify-content: flex-end;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-content: center;
     }
 
     .footer-wrapper-main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        justify-items: center;
     }
 
     .footer-wrapper3 {
-        flex: 0 1 25%;
+        padding-right: 30px;
     }
 
     .footer-wrapper4 {
         text-align: center;
-        padding-bottom: 0;
-        margin-bottom: 0;
     }
 }
 
@@ -160,67 +164,72 @@ section h3 {
 }
 
 
+.multi-level-nav ul ul {
+    background: #6a197d;
+}
+
 /* Simple menu style using flex
------------------------------ 
-.simple-menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+----------------------------- */
+@media screen and (min-width: 600px) {
+    .simple-menu ul {
+        display: grid;
+        grid-auto-flow: column;
+    }
+    
 }
 
 
 /* Advance menu style using flex
------------------------------------- 
-
-.advance-menu ul li a {
-    display: flex;
-    justify-content: flex-start;
-}
-
+------------------------------------ */
 .menu-icon {
-    flex: 0 0 1.5em;
-    font-size: 1.8em;
+    font-size: 1.6em;
+    padding-right: .5em;
 }
+
 
 .button-text {
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 
+.advance-menu ul li a{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+} 
+
+
 .button-text span {
-    display: block;
     font-size: 40%;
-    font-weight: lighter;
+    display: block;
     font-style: italic;
 }
 
 @media screen and (min-width: 600px) {
     .advance-menu ul {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-auto-flow: column;
     }
 
-    .advance-menu ul li {
-        display: flex;
-        flex: 1 0 12em;
-    }
 }
+
+
 
 
 /* social menu styles
 The accesiblity link in the head hides the text
 The nav-social link in the head displays the fontawesome icons 
------------------------------------- 
+------------------------------------ */
 @media screen and (min-width: 600px) {
     .social1 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: left;
     }
 
     .social2 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: right;
     }
 }
 
@@ -230,17 +239,22 @@ The nav-multi-level link in the head contains the base styling for the menus
 The two scripts below the body contains javascipts code that toggles the menu
 --------------------------------------------------- */
 
+@media screen and (min-width: 600px) {
+    .multi-level-nav ul {
+        display: grid;
+        grid-auto-flow: column;
+    }
+}
 
 
 
 /* mixed menu styles
 combination of two different menu's
----------------------------------------
+---------------------------------------*/
 @media screen and (min-width: 600px) {
     .mixed-menu-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-auto-flow: column;
         background: #3c096c;
     }
 }

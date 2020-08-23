@@ -164,76 +164,102 @@ article {
 }
 
 
-/* breakponts applied using flex 
------------------------------------------- 
-@media screen and (min-width: 600px) {
-    .container {
-        display: flex;
-        flex-direction: column;
+/* breakponts applied using floats and position 
+------------------------------------------ */
+@media screen and (min-width: 700px) {
+    .header-navigation ul {
+        float: right;
+        background: #204051;
+        width: 100%;
     }
 
- /* the main tag wraps navigation, main content and side bar
-this this splits them into two 
-    main {
-        display: flex;
+    .header-navigation ul li a {
+        background: #204051;
+        float: left; 
+                     
+    }
+
+
+    .main-navigation {
+        clear: both;
+        float: left;
+        width: 25%;
+    }   
+    
+    article {
+        float: left;         
+        width: 60%;
         
     }
 
-    nav {
-        flex: 0 0 10%;
+    .sidebar {
+        clear: both;
+    }  
+
+/* footer styles  */
+    .footer-main {
+        position: relative;
     }
-
-    aside {
-        flex: 0 0 15%;
-    }
-
-
-         /* using flex to make navigation horizontal 
-    .header-navigation ul {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-             /* footer flex styles
-footer wrapper main holds the 3 contents 
-    .footer-wrapper-main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-
-
 
     .footer-wrapper3 {
-        flex: 0 1 25%;
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        right: 30px;
     }
+}      
 
- 
-    .footer-wrapper4 {
-        text-align: center;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-}
-   
 
 @media screen and (min-width: 900px) {
-    main {
-        display: flex;
-        
+    .sidebar {
+        clear: none;
+        float: right;
+        width: 18%;
     }
 
-    nav {
-        flex: 0 0 15%;
+    .footer-main {
+        clear: both;
     }
 
-    aside {
-        flex: 0 0 20%;
+    .main-navigation {
+        width: 17%;
     }
 
+    article {
+        width: 50%;
+    }
+
+
+    /* footer styles  */
+
+    .fotter-wrapper1 {
+        padding-left: 50px;
+    }
+
+    .footer-wrapper2 {
+        position: absolute;
+        left: 25%;
+        top: 20px;
+    }
+
+    .footer-wrapper5 {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+    }
+
+    .footer-wrapper3 {
+        left: 70%;
+        top: 20px;
+        right: 50px;
+    }
+
+    .footer-wrapper4 {
+        text-align: center;
+    }
 }
+
+
 
 
 

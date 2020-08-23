@@ -11,10 +11,10 @@ h1, h2, h4, h4, h5 {
 }
 
 .site-title {
-    background: lightgrey;
+    background: #e0dede;
     text-align: center;
     padding: 50px 0;
-    color: #204051;
+    color: #3c096c;
 }
 
 .header-navigation {
@@ -25,7 +25,7 @@ h1, h2, h4, h4, h5 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background: #204051;
+    background: #6a197d;
     
   }
 
@@ -37,7 +37,7 @@ h1, h2, h4, h4, h5 {
 }
 
 .header-navigation ul a:hover{
-    background: rgba(196, 196, 196, 70%);
+    background: #ffa5b0;
     color: #204051;
 }
 
@@ -52,7 +52,7 @@ h1, h2, h4, h4, h5 {
 ----------------------------- */
 .footer-main {
     padding: 1.2em;
-    background: #204051;
+    background: #3c096c;
     color: whitesmoke;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h4, h4, h5 {
 
 .footer-list ul li a {
     text-decoration: none;
-    color: #84a9ac;
+    color: lightgrey;
 }
 
 .footer-list ul li a:hover {
@@ -78,11 +78,11 @@ h1, h2, h4, h4, h5 {
 
 
 .footer-wrapper3 {
-    color: #84a9ac;
+    color: lightgrey;
 }
 
 .footer-wrapper4 {
-    color: #3b6978;
+    color: grey;
     text-transform: uppercase;
 }
 
@@ -103,31 +103,6 @@ h1, h2, h4, h4, h5 {
     padding-bottom: 200px;
 }
 
-/* header and footer styles for larger pages
-using flex 
------------------------------ 
-@media screen and (min-width: 600px) {
-    .header-navigation ul {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .footer-wrapper-main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .footer-wrapper3 {
-        flex: 0 1 25%;
-    }
-
-    .footer-wrapper4 {
-        text-align: center;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-}
 
 
 /* general menu styles for all menu's
@@ -160,69 +135,113 @@ section h3 {
 }
 
 
-/* Simple menu style using flex
------------------------------ 
-.simple-menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.multi-level-nav ul ul {
+    background: #6a197d;
 }
 
 
-/* Advance menu style using flex
------------------------------------- 
-
-.advance-menu ul li a {
-    display: flex;
-    justify-content: flex-start;
+/* header menu style using float
+----------------------------- */
+@media screen and (min-width: 650px) {
+    .header-navigation ul li a{
+        float: left;
+    }
+    
+    .header-navigation ul {
+        background: #6a197d;
+        float: right;
+        width: 100%;
+        
+    }
 }
 
+
+/* Simple menu style using float
+----------------------------- */
+@media screen and (min-width: 650px) {
+    .simple-menu ul li a {
+        float: left;
+    }
+    
+    .simple-menu ul {
+        float: right;
+        width: 100%;
+    }
+}
+
+
+/* Advance menu style using float
+------------------------------------ */
 .menu-icon {
-    flex: 0 0 1.5em;
     font-size: 1.8em;
+    padding-right: 0.5em;
 }
+
 
 .button-text {
     font-size: 1.8em;
 }
 
 .button-text span {
-    display: block;
     font-size: 40%;
-    font-weight: lighter;
+    display: block;
     font-style: italic;
 }
 
-@media screen and (min-width: 600px) {
-    .advance-menu ul {
-        display: flex;
-        flex-wrap: wrap;
+.advance-menu ul li a{
+    display: flex;
+ 
+} 
+
+/* align advance menu horizontally using float*/
+@media screen and (min-width: 650px) {
+    .advance-menu ul li {
+        float: left;
     }
 
-    .advance-menu ul li {
-        display: flex;
-        flex: 1 0 12em;
+    .advance-menu ul {
+        float: left;
+        width: 100%;
     }
+
+    .advance-menu {
+        margin-bottom: 15em;
+    }
+
 }
+
+
 
 
 /* social menu styles
 The accesiblity link in the head hides the text
 The nav-social link in the head displays the fontawesome icons 
------------------------------------- 
-@media screen and (min-width: 600px) {
-    .social1 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+------------------------------------ */
+@media screen and (min-width: 650px) {
+        .socials {
+            clear: both;
+        }
+
+         .social1 ul li a {
+             float: right;
+        }
+
+        .social1 ul {
+            float: left;
+            width: 100%;
+        }
+
+        .social2 ul li a{
+            float: left;
+        }
+
+        .social2 ul {
+            float: left;
+            width: 100%;
+        }
     }
 
-    .social2 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-}
+
 
 /* multi level menu styles
 The accesiblity link in the head hides the toggle text
@@ -230,17 +249,84 @@ The nav-multi-level link in the head contains the base styling for the menus
 The two scripts below the body contains javascipts code that toggles the menu
 --------------------------------------------------- */
 
+@media screen and (min-width: 650px) {
+    .multi-level-nav ul li a{
+        float: left;
+    }
+
+    .multi-level-nav ul {
+        width: 100%;
+        float: right;
+    }
+
+    .multi-level-nav ul li ul li a {
+        clear: both;
+        display: inline;
+     }
+
+     .multi-level-nav ul li ul {
+            width: auto;
+            clear: both;
+   }
+}
 
 
 
 /* mixed menu styles
 combination of two different menu's
----------------------------------------
-@media screen and (min-width: 600px) {
-    .mixed-menu-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+---------------------------------------*/
+@media screen and (min-width: 650px) {
+    .mixed-menu-wrapper nav ul {
+        float: right;
         background: #3c096c;
+    }
+}
+
+/* breakponts applied to footer 
+using floats and position 
+------------------------------------------ */
+@media screen and (min-width: 700px) {
+  
+    .footer-main {
+        position: relative;
+    }
+
+    .footer-wrapper3 {
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        right: 30px;
+    }
+}      
+
+@media screen and (min-width: 900px) {
+     .footer-main {
+        clear: both;
+    }
+
+    .fotter-wrapper1 {
+        padding-left: 50px;
+    }
+
+    .footer-wrapper2 {
+        position: absolute;
+        left: 25%;
+        top: 20px;
+    }
+
+    .footer-wrapper5 {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+    }
+
+    .footer-wrapper3 {
+        left: 70%;
+        top: 20px;
+        right: 50px;
+    }
+
+    .footer-wrapper4 {
+        text-align: center;
     }
 }
