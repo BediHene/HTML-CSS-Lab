@@ -42,6 +42,27 @@ h1, h2, h4, h4, h5 {
     color: #204051;
 }
 
+.has-child {
+    position: relative;
+}
+
+.has-child .submenu {
+    display: none;
+    position: absolute;
+    background-color: #204051;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.has-child .submenu li {
+    width: 100%;
+}
+
+.has-child:hover .submenu {
+    display: block;
+}
+
 
 /* NAVIGATION STYLES */
 .main-navigation {
@@ -72,8 +93,29 @@ h1, h2, h4, h4, h5 {
     color: #204051;
 }
 
+.has-children {
+    position: relative;
+}
+
 .main-navigation .sub-menu {
-    padding-left: 2em;
+    position: absolute;
+    background: darkgrey;
+    padding-left: 0;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    transform: translateX(50px);
+    min-width: 100px;
+    
+    
+}
+
+.main-navigation .has-children:hover .sub-menu {
+     display: block;
+     left: 40%;
+     transform: translateX(0);
+
 }
 
 

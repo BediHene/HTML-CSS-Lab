@@ -43,6 +43,27 @@ h1, h2, h4, h4, h5 {
 }
 
 
+.has-child {
+    position: relative;
+}
+
+.has-child .submenu {
+    display: none;
+    position: absolute;
+    background-color: #344c58;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.has-child .submenu li {
+    width: 100%;
+}
+
+.has-child:hover .submenu {
+    display: block;
+}
+
 /* NAVIGATION STYLES */
 .main-navigation {
     background: #e4e3e3;
@@ -58,7 +79,7 @@ h1, h2, h4, h4, h5 {
 
 .main-navigation a {
     text-decoration: none;
-    padding: 1em 1.6em;
+    padding: .7em 1.6em;
     display: block;
 }
 
@@ -72,10 +93,31 @@ h1, h2, h4, h4, h5 {
     color: #204051;
 }
 
-.main-navigation .sub-menu {
-    padding-left: 2em;
+
+.has-children {
+    position: relative;
 }
 
+.main-navigation .sub-menu {
+    position: absolute;
+    background: darkgrey;
+    padding-left: 0;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    transform: translateX(50px);
+    min-width: 100px;
+    
+    
+}
+
+.main-navigation .has-children:hover .sub-menu {
+     display: block;
+     left: 40%;
+     transform: translateX(0);
+
+}
 
 /* SIDEBAR STYLES */
 .sidebar {
@@ -167,17 +209,24 @@ article {
 /* breakponts applied using floats and position 
 ------------------------------------------ */
 @media screen and (min-width: 700px) {
-    .header-navigation ul {
-        float: right;
-        background: #204051;
+    .header-navigation ul{
+        float: left;
         width: 100%;
     }
 
-    .header-navigation ul li a {
-        background: #204051;
-        float: left; 
-                     
+    .header-navigation ul li {
+        float: left;
     }
+
+    .has-child li a {
+        padding: 1em 25px;
+        margin: 0%;
+      
+    }
+
+ 
+
+   
 
 
     .main-navigation {

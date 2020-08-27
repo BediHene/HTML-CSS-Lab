@@ -21,14 +21,32 @@
            </div>
 
            <div class="header-navigation">
-               <ul>
-                   <li><a href="#">Home</a></li>
-                   <li><a href="#">Floats</a></li>
-                   <li><a href="#">Flexbox</a></li>
-                   <li><a href="#">Grid</a></li>
-                   <li><a href="#">Contact Me</a></li>
-               </ul>
-           </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="has-child"><a href="#">Floats <i class="fa fa-caret-down"></i></a>
+                     <ul class="submenu">
+                         <li><a href="layout_floats.html">Float Layout</a></li>
+                         
+                         <li><a href="menus_floats.html">Float Menu</a></li>
+                     </ul>
+                 </li>
+                <li class="has-child"><a href="#">Flexbox <i class="fa fa-caret-down"></i></a>
+                 <ul class="submenu">
+                     <li><a href="layout_flex.html">Flex Layout</a></li>
+                     <li><a href="cards_flexbox.html">Flex Cards</a></li>
+                     <li><a href="menus_flex.html">Flex Menu</a></li>
+                 </ul>
+                 </li>
+                <li class="has-child"><a href="#">Grid <i class="fa fa-caret-down"></i></a>
+                 <ul class="submenu">
+                     <li><a href="layout_grid.html">Grid Layout</a></li>
+                     <li><a href="cards_grids.html">Grid Cards</a></li>
+                     <li><a href="menus_grids.html">Grid Menu</a></li>
+                 </ul>
+                 </li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+        </div>
         </header>
 
         <div class="menu-container"> 

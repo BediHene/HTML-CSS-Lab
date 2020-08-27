@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale= 1.0">
         <link href="css\layout_grids.css"  type="text/css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     </head>
 
     <body>
@@ -16,13 +18,31 @@
            </div>
 
            <div class="header-navigation">
-               <ul>
-                   <li><a href="#">Home</a></li>
-                   <li><a href="#">Floats</a></li>
-                   <li><a href="#">Flexbox</a></li>
-                   <li><a href="#">Grid</a></li>
-                   <li><a href="#">Contact Me</a></li>
-               </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="has-child"><a href="#">Floats <i class="fa fa-caret-down"></i></a>
+                     <ul class="submenu">
+                         <li><a href="layout_floats.html">Float Layout</a></li>
+                         
+                         <li><a href="menus_floats.html">Float Menu</a></li>
+                     </ul>
+                 </li>
+                <li class="has-child"><a href="#">Flexbox <i class="fa fa-caret-down"></i></a>
+                 <ul class="submenu">
+                     <li><a href="layout_flex.html">Flex Layout</a></li>
+                     <li><a href="cards_flexbox.html">Flex Cards</a></li>
+                     <li><a href="menus_flex.html">Flex Menu</a></li>
+                 </ul>
+                 </li>
+                <li class="has-child"><a href="#">Grid <i class="fa fa-caret-down"></i></a>
+                 <ul class="submenu">
+                     <li><a href="layout_grid.html">Grid Layout</a></li>
+                     <li><a href="cards_grids.html">Grid Cards</a></li>
+                     <li><a href="menus_grids.html">Grid Menu</a></li>
+                 </ul>
+                 </li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
            </div>
         </header>
 
@@ -34,13 +54,23 @@
                     <li><a href="#">Layouts</a></li>
                     <li><a href="#">Cards</a></li>
                     <li><a href="#">Grid</a></li>
-                    <li class="has-children"><a href="#">Contact Me</a></li>
+                    <li class="has-children"><a href="#">Services <i class="fa fa-caret-down"></i></a>
                         <ul class="sub-menu">
-                            <li><a href="#">Contact Me</a></li>
-                            <li><a href="#">Contact Me</a></li>
-                            <li><a href="#">Contact Me</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Conferences</a></li>
+                            <li><a href="#">Seminars</a></li>
                         </ul>
-                    <li><a href="#">Contact Me</a></li>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="has-children"><a href="#">Products <i class="fa fa-caret-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">Ships</a></li>
+                            <li><a href="#">Trucks</a></li>
+                            <li><a href="#">Motobikes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Conferences</a></li>
                     <li><a href="#">Contact Me</a></li>
                 </ul>
             </nav>
