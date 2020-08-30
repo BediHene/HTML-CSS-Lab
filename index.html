@@ -1,12 +1,159 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Experimental site</title>
-        <meta charset="utf-8">
-        <link href=""  type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="site-logo">
+            <h3>I am BediHene</h3>
+        </div>
 
-    <body>
-        
-    </body>
+        <nav class="header-navigation">
+            <ul class="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li class="has-children"><a href="#">Experiments</a>
+                    <ul class="submenu">
+                        <li><a href="layout_flex.html">Flex Layout</a></li>
+                        <li><a href="menus_flex.html">Flex Menu</a></li>
+                        <li><a href="cards_flexbox.html">Flex Cards</a></li>
+                        <li><a href="layout_grid.html">Grid Layout</a></li>
+                        <li><a href="menus_grids.html">Grid Menu</a></li>
+                        <li><a href="cards_grids.html">Grid Cards</a></li>
+                        <li><a href="menus_floats.html">Float Menu</a></li>
+                        <li><a href="layout_floats.html">Float Layout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero-section">
+        <div class="hero-heading">
+            <h1>I do Data Science and Web development</h1>
+            <p>writing code to extract meaning from data and serving it to the 
+                web through API's
+            </p>
+        </div>
+
+        <div class="hero-button">
+            <button>Contact Me</button>
+        </div>
+    </section>
+
+
+    <section class="about-me">
+        <article>
+            <h2>About Me</h2>
+            <p>
+                I am a Data Scientist and a web developer based in the beautiful city of Accra.
+            </p>
+        </article>
+
+        <article>
+            <h2>What I Do</h2>
+            <h3>Data Science</h3>
+            <p>My love for manipulating data and programming led me to the world of data science, and I have enjoyed it since. Python is my prefferred language of choice. I am very comfortable with popular libraries such as NumPy, Pandas, SciPy, Matplotlib, Flask and Django.</p>
+            <p>I feel very comfortable scraping data from the web, cleaning and analysing, extracting meaning from the data and finally serving it to users through an API, all with the beautiful Python language.</p>
+        </article>
+
+        <article>
+            <h3>Web Development</h3>
+            <p>little did i know that my hobbiy will come in handy. As a statistic student at the university learning Bayesian Theory and the likes, I needed to cool off my mind. Fascinated about the Web (Internet 1.0), i started to learn how to code HTML as a hobby (yes, I did Dreamweaver, Microsoft Publisher and all). </p> 
+            <p> This led me to CSS. I soon realise I had to be able process my own images whilst building a website. This also led me to the worls of  graphic design using industry standard tools such as Adobe Photoshop, Illustrator, and recently XD.</p>
+        </article>
+
+        <article class="follow-me">
+            <h3>Learn more about me and my works on the various platforms</h3>
+            <div class="advance-menu menu">
+                <ul>
+                    <li> 
+                    <a href="https://gh.linkedin.com/in/princebediako"> 
+                        <div class="menu-icon"> 
+                        <i class="fa fa-linkedin"></i>
+                            </div>  <div class="button-text">
+                        LinkedIn <span>Follow my professional page here</span>
+                        </div>  
+                    </a>
+                    </li>
+
+                    <li> 
+                        <a href="https://github.com/BediHene"> 
+                            <div class="menu-icon"> 
+                            <i class="fa fa-github"></i>
+                                </div>  <div class="button-text">
+                            GitHub <span> This is where it all begins </span>
+                            </div>  
+                        </a>
+                    </li>
+
+                    <li> 
+                        <a href="https://stackoverflow.com/users/14081262/bedihene"> 
+                            <div class="menu-icon"> 
+                            <i class="fa fa-stack-overflow"></i>
+                                </div>  <div class="button-text">
+                            StackOverflow <span>Providing answers to everyday coding problems</span>
+                            </div>  
+                        </a>
+                    </li>
+
+                    <li> 
+                        <a href="https://www.kaggle.com/princebediako"> 
+                            <div class="menu-icon"> 
+                                <i class="fab fa-kaggle"></i>
+                                </div>  <div class="button-text">
+                            Kaggle <span> Follow my Data Science works here </span>
+                            </div>  
+                        </a>
+                    </li>
+
+                    <li> 
+                        <a href="https://codepen.io/bedihene"> 
+                            <div class="menu-icon"> 
+                            <i class="fa fa-codepen"></i>
+                                </div>  <div class="button-text">
+                            CodePen <span>My personal laboratory for testing code</span>
+                            </div>  
+                        </a>
+                        </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+    </section>
+
+    <section class="contact-me">
+        <h2>Contact Me</h2>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer1">
+            <h3>Find me here</h3>
+            <ul>
+                <li><a href="http://github.com"><div class="social-icon"><i class="fa fa-github"></i></div><span class="screen-reader-text">GitHub</span></a></li>
+                <li><a href="http://stackoverflow.com"><div class="social-icon"><i class="fa fa-stack-overflow"></i></div><span class="screen-reader-text">StackOverflow</span></a></li>
+                <li><a href="http://linkedin.com"><div class="social-icon"><i class="fa fa-linkedin"></i></div><span class="screen-reader-text">LinkedIn</span></a></li>
+                <li><a href="http://kaggle.com"><div class="social-icon"><i class="fab fa-kaggle"></i></div><span class="screen-reader-text">Kaggle</span></a></li>
+            </ul>
+        </div>
+
+        <div class="footer2">
+            <h4>Give me an email</h4>
+        </div>
+
+        <div class="footer3">
+            <p>Copyright &COPY; <span> I am Bedihene</span> <span>2017</span> </p>
+        </div>
+    </footer>
+
+</body>
 </html>
