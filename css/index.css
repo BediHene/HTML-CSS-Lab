@@ -1,0 +1,48 @@
+
+
+
+/* --------------------------------
+forms styles 
+--------------------------------- */
+@media screen and (min-width: 600px) {
+   .form-container {
+       border: 1px solid lightgrey; 
+       border-radius: 5px;
+       max-width: 408px;
+       margin: 0 auto;
+       padding: 20px 50px 50px;
+   }
+}
+
+.form-label {
+    display: block;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+.form-label span {
+    color: red;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background: lightgrey;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.form-button:hover {
+    background: lightblue;
+}

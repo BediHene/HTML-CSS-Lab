@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css\index.css">
 </head>
 <body>
     <header>
@@ -132,7 +133,41 @@
     </section>
 
     <section class="contact-me">
-        <h2>Contact Me</h2>
+        <div class="form-container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/psalm900@yahoo.com" method="POST">
+                <div>
+                    <label for="name" class="form-label">Name <span>*</span></label>
+                    <input type="text" name="Name" id="name" class="form-control" required>
+                </div>
+
+                <div>
+                    <label for="email" class="form-label">Email <span>*</span></label>
+                    <input type="email" name="Email" id="email" class="form-control" required>
+                </div>
+
+                <div>
+                    <label for="purpose" class="form-label">Purpose <span>*</span></label>
+                    <select name="purpose-of-contact" id="purpose" class="form-control" required>
+                        <option value="none" label="--Select--" selected disabled hidden></option>
+                        <option value="need-website" label="I need a website"></option>
+                        <option value="hire-you" label="I want to hire you"></option>
+                        <option value="partner" label="I want to work with you on a project"></option>
+                        <option value="good-job" label="I think you're doing a great job"></option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message" class="form-label">Brief summary of project <span>*</span></label>
+                    <textarea name="project-summary" id="message" cols="30" rows="5" class="form-control" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" class="form-button">Submit</button>
+                    <button type="reset" class="form-button">Clear</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer class="main-footer">
