@@ -1,6 +1,16 @@
 
 
 
+
+/* --------------------------------
+logo
+--------------------------------- */
+.site-logo {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    
+}
+
 /* --------------------------------
 forms styles 
 --------------------------------- */
@@ -46,3 +56,32 @@ forms styles
 .form-button:hover {
     background: lightblue;
 }
+
+
+
+/* --------------------------------
+menu experiment
+--------------------------------- */
+.dropdown {
+    list-style-type: none;
+    font-family: sans-serif;
+    background: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown a {
+    text-decoration: none;
+ 
+}
+
+.dropdown a:hover {
+    background: lightcoral;
+    display: block;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+
+}
+

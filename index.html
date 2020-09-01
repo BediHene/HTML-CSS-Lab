@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css\index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="site-logo">
-            <h3>I am BediHene</h3>
+            <h3>iAmBediHene</h3>
         </div>
 
         <nav class="header-navigation">
@@ -130,6 +131,21 @@
 
     <section class="portfolio">
         <h2>Portfolio</h2>
+        <h3>One button dropdown</h3>
+
+        <ul class="dropdown">
+          <li><a href="#">Test1 </a></li>
+          <li onclick="myFunction()" class="dropbtn drop"><a href="#">Test2 </a>
+            <ul id="myDropdown" class="dropdown-content">
+              <li><a href="#">Test </a></li>
+              <li><a href="#">Test </a></li>
+              <li><a href="#">Test </a></li>
+              <li><a href="#">Test </a></li>
+            </ul>
+          </li>
+          <li><a href="#">Test3 </a></li>
+        </ul>
+
     </section>
 
     <section class="contact-me">
@@ -189,6 +205,31 @@
             <p>Copyright &COPY; <span> I am Bedihene</span> <span>2017</span> </p>
         </div>
     </footer>
+
+
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 
 </body>
 </html>
