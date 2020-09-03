@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+
+    <style>
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          cursor: pointer;
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .show {
+          display: block;
+        }
+
+
+        /*------------------------------------------------
+        my dropdown styles
+        --------------------------------------------------*/
+         
+        .menu-container {
+            font-family: sans-serif;
+            background: darkcyan;
+            padding: 0px;
+            margin: 0;
+        }
+
+        .menu-container li {
+            list-style-type: none;
+        }
+
+        .menu-container li a{
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            color: white;
+        }
+
+        .menu-container li a:hover {
+            background: #333;
+        }
+
+        .menu-container li a:active {
+            background: lightgray;
+        }
+
+        .sub-menu1 {
+            padding: 0;
+            background: grey;
+        }
+
+        .has-children1 {
+            position: relative;
+        }
+
+        .sub-menu1 {
+            position: absolute;
+            display: none;
+        }
+
+        .myshow{
+            display: block;
+        }
+
+        .menu-container {
+            display: flex;
+        }
+
+
+        </style>
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div> 
+      </div>
+      
+      <h3>Dropdown Menu inside a Navigation Bar</h3>
+      <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+
+      <section>
+      <h2>Another Dropdown Menu</h2>
+      <nav class="my-menu">
+        <ul class="menu-container">
+           <li><a href="#">Home</a></li>
+      
+           <li class="has-children1"><a href="#" class="dropwrapper" onclick="myFunction1()">Services <i class="fa fa-caret-down"></i></a>
+                <ul class="sub-menu1" id="myDropdown1">
+                    <li><a href="#">weddings</a></li>
+                    <li><a href="#">seminars</a></li>
+                    <li><a href="#">conferences</a></li>
+                </ul> 
+            </li>
+           <li class="has-children1"><a href="#" class="dropwrapper" onclick="myFunction2()">Locations <i class="fa fa-caret-down"></i></a>
+                <ul class="sub-menu1" id="myDropdown2">
+                    <li><a href="#">weddings</a></li>
+                    <li><a href="#">seminars</a></li>
+                    <li><a href="#">conferences</a></li>
+                </ul>
+            </li>
+      
+           <li class="has-children1"><a href="#" class="dropwrapper" onclick="myFunction3()">Careers <i class="fa fa-caret-down"></i></a>
+                 <ul class="sub-menu1" id="myDropdown3">
+                    <li><a href="#">Operations</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">Administration</a></li>
+                </ul>
+           </li>
+           <li><a href="#">Contact Us</a></li>
+      
+         </ul>
+      </nav> 
+    </section> 
+      
+
+
+
+
+
+      <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+
+
+
+
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("myshow");
+      }
+      
+ 
+
+
+
+
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("myshow");
+      }
+      
+  
+
+
+ 
+
+             /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction3() {
+        document.getElementById("myDropdown3").classList.toggle("myshow");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropwrapper')) {
+
+    var dropdowns = document.getElementsByClassName("sub-menu1");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('myshow')) {
+        openDropdown.classList.remove('myshow');
+      }
+    }
+  }
+}
+
+      </script>
+</body>
+</html>

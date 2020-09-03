@@ -6,11 +6,12 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css\index.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="site-logo">
-            <h3>iAmBediHene</h3>
+            <h3>iAmBediHene.</h3>
         </div>
 
         <nav class="header-navigation">
@@ -19,8 +20,8 @@
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">Contact Me</a></li>
                 <li><a href="#">Portfolio</a></li>
-                <li class="has-children"><a href="#">Experiments</a>
-                    <ul class="submenu">
+                <li class="has-children"><a href="#" class="dropwrapper" onclick="myFunction()">Experiments <i class="fa fa-caret-down"></i></a>
+                    <ul class="submenu" id="mydropdown">
                         <li><a href="layout_flex.html">Flex Layout</a></li>
                         <li><a href="menus_flex.html">Flex Menu</a></li>
                         <li><a href="cards_flexbox.html">Flex Cards</a></li>
@@ -36,16 +37,14 @@
     </header>
 
 
-    <section class="hero-section">
-        <div class="hero-heading">
-            <h1>I do Data Science and Web development</h1>
-            <p>writing code to extract meaning from data and serving it to the 
-                web through API's
-            </p>
-        </div>
-
-        <div class="hero-button">
-            <button>Contact Me</button>
+    <section>
+        <div class="hero-image">
+            <div class="hero-text"> 
+                <h1>I do Data Science and Web development</h1>
+                <p>writing code to extract meaning from data and serving it to the 
+                    web through API's</p>
+                <button>Contact Me</button>
+            </div>
         </div>
     </section>
 
@@ -131,21 +130,7 @@
 
     <section class="portfolio">
         <h2>Portfolio</h2>
-        <h3>One button dropdown</h3>
-
-        <ul class="dropdown">
-          <li><a href="#">Test1 </a></li>
-          <li onclick="myFunction()" class="dropbtn drop"><a href="#">Test2 </a>
-            <ul id="myDropdown" class="dropdown-content">
-              <li><a href="#">Test </a></li>
-              <li><a href="#">Test </a></li>
-              <li><a href="#">Test </a></li>
-              <li><a href="#">Test </a></li>
-            </ul>
-          </li>
-          <li><a href="#">Test3 </a></li>
-        </ul>
-
+ 
     </section>
 
     <section class="contact-me">
@@ -213,22 +198,23 @@
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
         function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+          document.getElementById("mydropdown").classList.toggle("showSubmenu");
         }
         
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
-        }
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+  if (!event.target.matches('.dropwrapper')) {
+
+    var dropdowns = document.getElementsByClassName("submenu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showSubmenu')) {
+        openDropdown.classList.remove('showSubmenu');
+      }
+    }
+  }
+}
         </script>
 
 </body>

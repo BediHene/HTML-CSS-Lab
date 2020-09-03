@@ -1,4 +1,17 @@
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+}
 
+* {margin: 0;}
+
+/* --------------------------------
+header styles
+--------------------------------- */
+    header {
+        background: lightgray;
+        padding: 0px 15px;
+    }
 
 
 
@@ -7,9 +20,103 @@ logo
 --------------------------------- */
 .site-logo {
     font-family: 'Lobster', cursive;
-    font-size: 40px;
+    font-size: 30px;
     
 }
+
+
+/* --------------------------------
+menu navigation
+--------------------------------- */
+
+
+.main-menu, .submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}   
+
+.main-menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.has-children {
+    position: relative;
+}
+
+.submenu {
+    background: #F3f3f3;
+    position: absolute;
+    display: none;
+    width: 100%;  /* unset on large screens */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.submenu li a {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+}
+
+.submenu li a:hover {
+    background:#ddd;
+}
+
+/* this shows the submenu on hover using the JS code */
+.showSubmenu {
+    display: block;
+}
+
+
+/* --------------------------------
+header styles on large screens 
+--------------------------------- */
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* --------------------------------
+hero image
+--------------------------------- */
+.hero-image {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../images/alex-knight-hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.hero-text {
+   color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   text-align: center;
+   transform: translate(-50%, -50%);
+}
+
 
 /* --------------------------------
 forms styles 
