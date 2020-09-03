@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 * {margin: 0;}
@@ -104,9 +105,10 @@ hero image
     background-size: cover;
     position: relative;
     width: 100vw;
-    height: 100vh;
-    
+    height: 100vh;  
 }
+
+
 
 .hero-text {
    color: white;
@@ -117,6 +119,13 @@ hero image
    transform: translate(-50%, -50%);
 }
 
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+}
 
 /* --------------------------------
 forms styles 
