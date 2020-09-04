@@ -11,7 +11,7 @@ header styles
 --------------------------------- */
     header {
         background: lightgray;
-        padding: 0px 15px;
+        padding: 10px 15px;
     }
 
 
@@ -21,10 +21,12 @@ logo
 --------------------------------- */
 .site-logo {
     font-family: 'Lobster', cursive;
-    font-size: 30px;
-    
+    font-size: 30px;   
 }
 
+.site-logo h3 {
+    margin: 0;
+}
 
 /* --------------------------------
 menu navigation
@@ -40,7 +42,7 @@ menu navigation
 .main-menu li a {
     text-decoration: none;
     display: block;
-    padding: 15px 15px;
+    padding: 15px 15px 0;
     font-size: 18px;
     font-weight: bold;
 }
@@ -184,7 +186,85 @@ about me styles
     }
 
 
-    
+    @media screen and (min-width: 650px) {
+        .about-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+
+/* --------------------------------
+about menu styles 
+--------------------------------- */
+
+
+
+.advance-menu ul {
+    background: darkslateblue;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.advance-menu ul a {
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em;
+    display: block;
+}
+
+.advance-menu ul a:hover {
+    background: cyan;
+}
+
+.menu-icon {
+    font-size: 2em;
+    flex: 0 0 1.2em; /*space btn icon and text */
+}
+
+.button-text {
+    font-size: 2em;
+}
+
+.button-text span {
+    display: block;
+    font-size: 40%;
+    font-weight: lighter;
+}
+
+.advance-menu ul li a{
+    display: flex; /*icon and text on same line */
+}
+
+
+
+@media screen and (min-width: 650px) {
+    .advance-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .advance-menu ul li {
+        display: flex;
+        flex: 1 0 12em;
+    }
+
+    .follow-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    }
+
+    .about-me h2 {
+        font-size: 2.3em;
+    }
+
+    .about-me h3 {
+        font-size: 1.8em;
+    }
+}
+
+
 
 
 
