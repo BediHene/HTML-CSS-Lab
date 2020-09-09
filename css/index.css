@@ -265,6 +265,36 @@ about menu styles
 }
 
 
+/* --------------------------------
+portfolio styles 
+--------------------------------- */
+.portfolio {
+    padding: 2em 1em;
+    background: #eee;
+}
+
+.portfolio-gallery {
+    background: white;
+    margin: 1.5em 0;
+}
+
+.portfolio-gallery a {
+    text-decoration: none ;
+    color: #333;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-gallery p {
+    padding: 0 .8em 1.2em;
+}
+
+.portfolio-gallery h3 {
+    padding: 0 .8em;
+}
 
 
 
