@@ -174,7 +174,7 @@ about me styles
 --------------------------------- */
     .about-me{
         background: lightgray;
-        padding: 2em 2em;
+        padding: 2em 0 0;
     }
 
     .about-me article {
@@ -185,6 +185,9 @@ about me styles
         margin: .5em 0;
     }
 
+    .about-wrapper {
+        padding: 0 2em;
+    }
 
     @media screen and (min-width: 650px) {
         .about-wrapper {
@@ -201,7 +204,7 @@ about menu styles
 
 
 .advance-menu ul {
-    background: darkslateblue;
+    background: #204051;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -215,7 +218,7 @@ about menu styles
 }
 
 .advance-menu ul a:hover {
-    background: cyan;
+    background: #84a9ac;
 }
 
 .menu-icon {
@@ -378,3 +381,81 @@ menu experiment
 
 }
 
+
+
+/* -----------------------------
+    footer styles 
+------------------------------ */
+.main-footer {
+    background: #204051;
+    color: #F3f3f3;
+    padding: 50px 20px 20px;
+}
+
+.footermenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footermenu ul a {
+    color: #84a9ac;
+    text-decoration: none;
+}
+
+.footermenu ul a:hover {
+    color: #e4e3e3;
+}
+
+.footermenu ul li {
+    padding-bottom: 10px;
+}
+
+.footer1, .footer2, .footer3,
+.footer4 {
+    margin-bottom: 25px;
+}
+
+.footer5 {
+    color: #84a9ac;
+}
+
+.dot, .atgmail {
+    color: yellow;
+    font-weight: bold;
+}
+
+.myemail {
+    color: #84a9ac;
+}
+
+.myemail:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* social icons in footer */
+.footer1 ul li a {
+    display: flex;
+}
+
+.social-icon {
+    flex: 0 0 20px;
+}
+
+
+@media screen and (min-width: 700px){
+    .footer-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer4 {
+        flex: 0 0 20%;
+    }
+
+    .footer5 {
+        text-align: center;
+    }
+}
