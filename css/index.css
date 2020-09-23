@@ -6,11 +6,13 @@ body {
 
 * {margin: 0;}
 
+h2 {font-size: 2.5em;}
+
 /* --------------------------------
 header styles
 --------------------------------- */
     header {
-        background: lightgray;
+        background: #eee;
         padding: 10px 15px;
     }
 
@@ -45,6 +47,7 @@ menu navigation
     padding: 15px 15px 0;
     font-size: 18px;
     font-weight: bold;
+    color: #204051;
 }
 
 
@@ -143,8 +146,8 @@ hero image
 
 
 .hero-text a:hover {
-    background: darkcyan;
-    border: 1px solid darkcyan;
+    background: #204051;
+    border: 1px solid #204051;
     transition: 0.4s;
 }
 
@@ -174,19 +177,23 @@ about me styles
 --------------------------------- */
     .about-me{
         background: lightgray;
-        padding: 2em 0 0;
+        padding: 1.5em 0 0;
     }
 
-    .about-me article {
-        margin: 1.5em 0;
+    .about-me h2 {
+        margin-top: 1.2em;
     }
 
-    .about-me article h2, h3, p {
-        margin: .5em 0;
+    .about-me h3, p {
+        margin: .4em 0 0;
     }
 
     .about-wrapper {
         padding: 0 2em;
+    }
+
+    #whatido {
+        margin-bottom: 2.2em;
     }
 
     @media screen and (min-width: 650px) {
@@ -194,14 +201,24 @@ about me styles
             max-width: 600px;
             margin: 0 auto;
         }
-    }
+
+        .about-me h2, h3, p {
+            text-align: center;
+        }
+
+        .follow-wrapper p {
+            margin-bottom: 1em;
+        }
+}
 
 
 /* --------------------------------
 about menu styles 
 --------------------------------- */
 
-
+.follow-wrapper {
+    margin: 0 2em .5em;
+}
 
 .advance-menu ul {
     background: #204051;
@@ -272,7 +289,7 @@ about menu styles
 portfolio styles 
 --------------------------------- */
 .portfolio {
-    padding: 2em 1em;
+    padding: 4em 1em 2em;
     background: #eee;
 }
 
@@ -301,12 +318,37 @@ portfolio styles
 
 
 
+@media screen and (min-width: 600px) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, auto));
+        gap: 2em;
+    }
+
+    .portfolio .portfolio-heading {
+        text-align: center;
+    }
+
+    #pheading {
+        margin-bottom: 2em;
+    }
+
+    .portfolio-gallery {
+        margin: 0em 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .portfolio-container {
+        grid-template-columns: repeat(3, minmax(0, auto));
+    }
+}
 
 /* --------------------------------
 forms styles 
 --------------------------------- */
 .contact-me { 
-    padding: 2em;
+    padding: 4em 2em 2em;
 }
 
 
@@ -317,6 +359,11 @@ forms styles
        max-width: 408px;
        margin: 0 auto;
        padding: 20px 50px 50px;
+   }
+
+   .contact-me h2 {
+       text-align: center;
+       margin-bottom: 1em;
    }
 }
 
